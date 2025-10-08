@@ -37,3 +37,6 @@
 # Ignore master key for decrypting credentials and more.
 /node_modules
 config/master.key
+credentials.yml.enc
+tmp/pids/
+tmp/storage/
