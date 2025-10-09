@@ -32,6 +32,7 @@
   font-family: 'Futura Cyrillic Heavy', sans-serif;
   color: white;
   padding: 0px 20px 0px 20px;
+  font-size: 33px;
 }
 
 .footer-link:hover {
@@ -43,4 +44,5 @@
   color: white;
   font-size: x-small;
   padding-bottom: 1rem;
+  font-size: 15px;
 }
