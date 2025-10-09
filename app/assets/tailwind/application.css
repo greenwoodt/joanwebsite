@@ -11,3 +11,35 @@
   font-weight: normal;
   font-style: normal;
 }
+.header-title {
+  font-family: 'Futura Extra Bold', sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: -0.06em;
+}
+
+.copyright-text {
+  font-family: 'Futura Cyrillic Heavy', sans-serif;
+  color: white;
+  font-size: x-small;
+  padding-bottom: 1rem;
+}
+
+.footer-link {
+  font-family: 'Futura Cyrillic Heavy', sans-serif;
+  color: white;
+  padding: 0px 20px 0px 20px;
+}
+
+.footer-link:hover {
+  color: #d1d5db; /* Tailwind's gray-300 for a lighter hover */
+}
+
+.email-text {
+  font-family: 'Futura Cyrillic Heavy', sans-serif;
+  color: white;
+  font-size: x-small;
+  padding-bottom: 1rem;
+}
