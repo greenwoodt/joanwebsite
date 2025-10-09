@@ -34,7 +34,7 @@
 }
 
 .footer-link:hover {
-  color: #d1d5db; /* Tailwind's gray-300 for a lighter hover */
+  color: #d1d5db;
 }
 
 .email-text {
