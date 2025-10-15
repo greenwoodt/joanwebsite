@@ -1,2 +1,2 @@
-# Joanwebsite
-Portfolio for Joan built on Rails 8
+# joanazpetita.com 
+A simple professional portfolio built on Rails 8.
