@@ -1,28 +1,74 @@
 <div class="container-home">
-  <div class="header flex justify-between">
-    <h1 class="header-title font-extrabold text-[50px] tracking-[-0.06em]" style="font-family: 'Futura Extra Bold', sans-serif; color: white;">
+  <div class="header flex flex-col md:flex-row md:justify-between">
+    <h1 class="header-title font-extrabold text-[32px] md:text-[50px] tracking-[-0.06em] md:pl-0 md:w-1/2" style="font-family: 'Futura Extra Bold', sans-serif; color: white;">
       Joan Azpeitia
     </h1>
-    <h1 class="header-title font-extrabold text-[50px] tracking-[-0.06em]" style="font-family: 'Futura Extra Bold', sans-serif; color: white;">
+    <h1 class="header-title font-extrabold text-[32px] md:text-[50px] tracking-[-0.06em] md:w-1/2 md:text-right" style="font-family: 'Futura Extra Bold', sans-serif; color: white;">
       Digital Compositor
     </h1>
   </div>
   <div class="reels">
     <div class="reel-1 mb-24">
-      <a href="https://vimeo.com/1052111279?share=copy" target="_blank">
-        <img src="<%= asset_path("filmHome_v004.jpeg") %>" alt="film-home" class="hidden sm:block">
+      <h3 class="font-extrabold text-[30px] tracking-[-0.06em]" style="font-family: 'Futura Extra Bold', sans-serif; color: white;">Film reel</h3>
+      <a href="https://vimeo.com/1052111279?share=copy" target="_blank" class="video-link">
+        <video
+          src="/videos/filmReelLoopencoded.mp4"
+          alt="film-reel"
+          class="hidden md:block"
+          muted
+          preload="none"
+          style="width:100%;cursor:pointer;"
+        ></video>
       </a>
-      <a href="https://vimeo.com/1052111279?share=copy" target="_blank">
-        <img src="<%= asset_path("filmHomePhone_v005.jpeg") %>" alt="film-home-phone" class="block sm:hidden">
+      <a href="https://vimeo.com/1052111279?share=copy" target="_blank" class="video-link">
+        <video
+          src="/videos/filmReelLoopPhoneencoded.mp4"
+          alt="film-reel-phone"
+          class="block md:hidden"
+          muted
+          preload="none"
+          style="width:100%;cursor:pointer;"
+        ></video>
       </a>
     </div>
     <div class="reel-2 mt-24">
-      <a href="https://vimeo.com/393487630?fl=pl&fe=sh" target="_blank">
-        <img src="<%= asset_path("commHome_v004.jpeg") %>" alt="commercial-home" class="hidden sm:block">
+      <h3 class="font-extrabold text-[30px] tracking-[-0.06em]" style="font-family: 'Futura Extra Bold', sans-serif; color: white;">Commercial reel</h3>
+      <a href="https://vimeo.com/393487630?fl=pl&fe=sh" target="_blank" class="video-link">
+        <video
+          src="/videos/commercialReelLoopencoded.mp4"
+          alt="commercial-reel"
+          class="hidden md:block"
+          muted
+          preload="none"
+          style="width:100%;cursor:pointer;"
+        ></video>
       </a>
-      <a href="https://vimeo.com/393487630?fl=pl&fe=sh" target="_blank">
-        <img src="<%= asset_path("commHomePhone_v005.jpeg") %>" alt="commercial-home-phone" class="block sm:hidden">
+      <a href="https://vimeo.com/393487630?fl=pl&fe=sh" target="_blank" class="video-link">
+        <video
+          src="/videos/commercialReelLoopPhoneencoded.mp4"
+          alt="commercial-reel-phone"
+          class="block md:hidden"
+          muted
+          preload="none"
+          style="width:100%;cursor:pointer;"
+        ></video>
       </a>
     </div>
   </div>
 </div>
+<script>
+  document.querySelectorAll('.video-link video').forEach(function(video) {
+    video.addEventListener('mouseenter', function() {
+      video.loop = true;
+      video.play();
+    });
+    video.addEventListener('mouseleave', function() {
+      video.loop = false;
+      video.pause();
+      video.currentTime = 0;
+    });
+    video.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  });
+</script>
